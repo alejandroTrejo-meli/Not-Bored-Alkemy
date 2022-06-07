@@ -10,7 +10,9 @@ import UIKit
 class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
-    var numOfPeople: Int!
+    //var numOfPeople: Int!
+    // TODO: BORRAR
+    var numOfPeople = 1
     
     var categoryList: [Category] {
         return Category.allCases
@@ -61,7 +63,7 @@ extension CategoryListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = self.tableView.cellForRow(at: indexPath) as? TableCell, let category = cell.title.text {
-            coordinator.toScreen(numOfPeople: 1, category: category)
+            coordinator.toScreen(numOfPeople: numOfPeople, category: category)
         }
     }
 }

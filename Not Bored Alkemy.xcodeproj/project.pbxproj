@@ -10,6 +10,7 @@
 		76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */; };
 		76F8F232284F7FD200FBB329 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */; };
 		76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */; };
+		76F8F236284F8C9400FBB329 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F235284F8C9400FBB329 /* Category.swift */; };
 		A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B61284ECF6D00406C39 /* AppDelegate.swift */; };
 		A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B63284ECF6D00406C39 /* SceneDelegate.swift */; };
 		A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1417B6A284ECF6D00406C39 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCoordinator.swift; sourceTree = "<group>"; };
 		76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewController.xib; sourceTree = "<group>"; };
+		76F8F235284F8C9400FBB329 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A1417B5E284ECF6D00406C39 /* Not Bored Alkemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Not Bored Alkemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417B61284ECF6D00406C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1417B63284ECF6D00406C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76F8F234284F8C7E00FBB329 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76F8F235284F8C9400FBB329 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A1417B55284ECF6D00406C39 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
+				76F8F234284F8C7E00FBB329 /* Model */,
 				A1417BAE284EDB7100406C39 /* Managers */,
 				A1417BAD284EDB2200406C39 /* Support */,
 				A1417BAC284EDA9D00406C39 /* Protocols */,
@@ -357,6 +368,7 @@
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */,
 				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,
+				76F8F236284F8C9400FBB329 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

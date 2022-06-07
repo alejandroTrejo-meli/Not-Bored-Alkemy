@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Category: String {
+enum Category: String, CaseIterable {
     case education = "Education"
     case recreational = "Recreational"
     case social = "Social"

@@ -10,41 +10,50 @@ import UIKit
 class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
+    var categoryList: [Category] {
+        return Category.allCases
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Activities"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "🔀", style: .plain, target: self, action: nil)
-
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupUI()
     }
+    
+    func setupUI(){
+        self.title = "Activities"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "🔀", style: .plain, target: self, action: #selector(randomPressed))
+        registerCells()
+    }
+    
+    func registerCells(){
+        // Instanciar los nibs de TableCell
+        for category in categoryList {
+            tableView.register(UINib(nibName: "TableCell", bundle: nil), forCellReuseIdentifier: category.rawValue)
 
+        }
+
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 9
     }
-
-    /*
+    
+    @objc func randomPressed(){
+        print("Random")
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let identifier: String = categoryList[indexPath.row].rawValue
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TableCell
+        cell.title.text = identifier
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

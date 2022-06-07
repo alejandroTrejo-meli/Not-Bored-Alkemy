@@ -11,6 +11,8 @@
 		76F8F232284F7FD200FBB329 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */; };
 		76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */; };
 		76F8F236284F8C9400FBB329 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F235284F8C9400FBB329 /* Category.swift */; };
+		76F8F23C284F994200FBB329 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F23A284F994200FBB329 /* TableCell.swift */; };
+		76F8F23D284F994200FBB329 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F8F23B284F994200FBB329 /* TableCell.xib */; };
 		A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B61284ECF6D00406C39 /* AppDelegate.swift */; };
 		A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B63284ECF6D00406C39 /* SceneDelegate.swift */; };
 		A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1417B6A284ECF6D00406C39 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewController.xib; sourceTree = "<group>"; };
 		76F8F235284F8C9400FBB329 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		76F8F23A284F994200FBB329 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		76F8F23B284F994200FBB329 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		A1417B5E284ECF6D00406C39 /* Not Bored Alkemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Not Bored Alkemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417B61284ECF6D00406C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1417B63284ECF6D00406C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 				76F8F235284F8C9400FBB329 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		76F8F237284F986500FBB329 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				76F8F23B284F994200FBB329 /* TableCell.xib */,
+				76F8F23A284F994200FBB329 /* TableCell.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		A1417B55284ECF6D00406C39 = {
@@ -176,6 +189,7 @@
 		A1417BA9284EDA2200406C39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				76F8F237284F986500FBB329 /* UIComponents */,
 				A1417BAB284EDA4B00406C39 /* Views */,
 				A1417BAA284EDA3300406C39 /* Controllers */,
 				A1417BA8284EDA0A00406C39 /* Coordinators */,
@@ -333,6 +347,7 @@
 				76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */,
 				A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */,
 				A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */,
+				76F8F23D284F994200FBB329 /* TableCell.xib in Resources */,
 				A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +379,7 @@
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
 				A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */,
 				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
+				76F8F23C284F994200FBB329 /* TableCell.swift in Sources */,
 				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */,

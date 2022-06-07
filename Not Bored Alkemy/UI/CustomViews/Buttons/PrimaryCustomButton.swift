@@ -23,7 +23,7 @@ import UIKit
             if isEnabled {
                 backgroundColor = UIColor.systemBlue
             } else {
-                backgroundColor = UIColor.gray
+                backgroundColor = UIColor.systemGray4
             }
             backColor = backgroundColor
         }

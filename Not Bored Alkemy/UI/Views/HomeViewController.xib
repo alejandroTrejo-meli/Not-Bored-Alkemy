@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Not_Bored_Alkemy" customModuleProvider="target">
             <connections>
+                <outlet property="participantsTextfield" destination="ZGU-Nu-pui" id="p4A-C1-GLd"/>
+                <outlet property="startButton" destination="u9A-Mi-DQ5" id="6sl-V3-JgG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,7 +41,7 @@
                                 <constraint firstAttribute="height" constant="48" id="td7-DJ-xaq"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
                         </textField>
                     </subviews>
                 </stackView>
@@ -51,6 +53,9 @@
                             <color key="backgroundColor" name="PrimaryBlue"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                            <connections>
+                                <action selector="continue:" destination="-1" eventType="touchUpInside" id="gE8-GD-RLW"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-sk-VuW" customClass="UnderlineButton" customModule="Not_Bored_Alkemy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="53" width="374" height="48"/>
@@ -63,6 +68,9 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="centerAlignment" value="YES"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="title" value="Terms and conditions"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="toTermsAndConditions:" destination="-1" eventType="touchUpInside" id="8SW-bQ-9OF"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

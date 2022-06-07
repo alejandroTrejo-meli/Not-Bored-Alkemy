@@ -14,4 +14,15 @@ class HomeViewCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    func toActivities(numOfParticipants: Int?){
+        
+    }
+
+    
+    func toTermsAndConditions(){
+        let vc = TermsAndConditionsVC.instance()
+        vc.modalPresentationStyle = .overFullScreen
+        navigationController.present(vc, animated: true)
+    }
 }

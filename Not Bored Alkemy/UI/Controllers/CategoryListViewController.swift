@@ -10,6 +10,9 @@ import UIKit
 class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
+    var numOfPeople: Int!
+    
+    
     var categoryList: [Category] {
         return Category.allCases
     }
@@ -45,6 +48,7 @@ class CategoryListViewController: UITableViewController {
     
     @objc func randomPressed(){
         print("Random")
+        coordinator.toScreen(numOfPeople: numOfPeople, category: nil)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,6 +57,13 @@ class CategoryListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TableCell
         cell.title.text = identifier
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = self.tableView.cellForRow(at: indexPath) as? TableCell {
+            print(cell.title.text ?? "")
+            coordinator.toScreen(numOfPeople: 1, category: cell.title.text)
+        }
     }
 
     /*

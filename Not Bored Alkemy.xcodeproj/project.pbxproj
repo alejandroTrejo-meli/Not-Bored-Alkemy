@@ -109,10 +109,18 @@
 		76F8F237284F986500FBB329 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				76F8F23E284F9D3800FBB329 /* TableCell */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		76F8F23E284F9D3800FBB329 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
 				76F8F23B284F994200FBB329 /* TableCell.xib */,
 				76F8F23A284F994200FBB329 /* TableCell.swift */,
 			);
-			path = UIComponents;
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		A1417B55284ECF6D00406C39 = {

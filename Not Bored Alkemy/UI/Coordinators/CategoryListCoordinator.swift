@@ -14,4 +14,11 @@ class CategoryListCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    func toScreen(numOfPeople: Int, category: String?){
+        let controller = CategoryListViewController.instance()
+        controller.coordinator = CategoryListCoordinator(navigationController: navigationController)
+        controller.numOfPeople = numOfPeople
+        self.navigationController.pushViewController(controller, animated: true)
+    }
 }

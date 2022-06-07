@@ -19,7 +19,7 @@ class MainCoordinator: Coordinator {
         //let vc = HomeViewController.instance()
         //vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
 
-        let vc = CategoryListViewController.instance()
+        let vc = CategoryListViewController(numOfPeople: nil)
         vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
         navigationController.pushViewController(vc, animated: true)
     }

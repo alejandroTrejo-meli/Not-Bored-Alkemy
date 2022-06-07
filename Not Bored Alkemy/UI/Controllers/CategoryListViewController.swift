@@ -10,9 +10,17 @@ import UIKit
 class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
-    //var numOfPeople: Int!
-    // TODO: BORRAR
-    var numOfPeople = 1
+    var numOfPeople: Int?
+    
+    init(numOfPeople: Int?) {
+        self.numOfPeople = numOfPeople
+        
+        super.init(nibName: "CategoryListViewController", bundle: Bundle.main)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var categoryList: [Category] {
         return Category.allCases
@@ -38,7 +46,7 @@ class CategoryListViewController: UITableViewController {
     }
     
     @objc func randomPressed(){
-        coordinator.toScreen(numOfPeople: numOfPeople, category: "Random")
+        coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: "Random")
     }
 }
 
@@ -63,7 +71,7 @@ extension CategoryListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = self.tableView.cellForRow(at: indexPath) as? TableCell, let category = cell.title.text {
-            coordinator.toScreen(numOfPeople: numOfPeople, category: category)
+            coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: category)
         }
     }
 }

@@ -16,11 +16,11 @@ class MainCoordinator: Coordinator {
     }
     func start() {
 
+        //let vc = HomeViewController.instance()
+        //vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
 
-        
-                let vc = HomeViewController.instance()
-                vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
-
+        let vc = CategoryListViewController.instance()
+        vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
         navigationController.pushViewController(vc, animated: true)
     }
 }

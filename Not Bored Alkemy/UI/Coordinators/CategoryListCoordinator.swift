@@ -15,7 +15,7 @@ class CategoryListCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func toScreen(numOfPeople: Int, category: String?){
+    func toScreen(numOfPeople: Int, category: String){
         let controller = CategoryListViewController.instance()
         controller.coordinator = CategoryListCoordinator(navigationController: navigationController)
         controller.numOfPeople = numOfPeople

@@ -128,14 +128,6 @@
 			path = Label;
 			sourceTree = "<group>";
 		};
-		4B1D3E0B284FE39000749CF2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		A1417B55284ECF6D00406C39 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +151,6 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
-				4B1D3E0B284FE39000749CF2 /* Extension */,
 				A1417BAE284EDB7100406C39 /* Managers */,
 				A1417BAD284EDB2200406C39 /* Support */,
 				A1417BAC284EDA9D00406C39 /* Protocols */,
@@ -192,6 +183,7 @@
 		A1417BA7284ED9F500406C39 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */,
 				A1417B9D284ED1A900406C39 /* View+Extension.swift */,
 				A1417B9B284ED13000406C39 /* ViewController+Extension.swift */,
 			);

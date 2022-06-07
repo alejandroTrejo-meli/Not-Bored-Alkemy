@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4B1D3DFC284FA44B00749CF2 /* PrimaryCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3DFB284FA44B00749CF2 /* PrimaryCustomButton.swift */; };
 		4B1D3DFE284FAB8200749CF2 /* UnderlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3DFD284FAB8200749CF2 /* UnderlineButton.swift */; };
+		4B1D3E01284FD3C700749CF2 /* TermsAndConditionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3DFF284FD3C700749CF2 /* TermsAndConditionsVC.swift */; };
+		4B1D3E02284FD3C700749CF2 /* TermsAndConditionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1D3E00284FD3C700749CF2 /* TermsAndConditionsVC.xib */; };
+		4B1D3E04284FD4AE00749CF2 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3E03284FD4AE00749CF2 /* TitleLabel.swift */; };
+		4B1D3E09284FE0DC00749CF2 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3E07284FE0DC00749CF2 /* ActivityViewController.swift */; };
+		4B1D3E0A284FE0DC00749CF2 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1D3E08284FE0DC00749CF2 /* ActivityViewController.xib */; };
+		4B1D3E0D284FE3A600749CF2 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */; };
 		A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B61284ECF6D00406C39 /* AppDelegate.swift */; };
 		A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B63284ECF6D00406C39 /* SceneDelegate.swift */; };
 		A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1417B6A284ECF6D00406C39 /* Assets.xcassets */; };
@@ -45,6 +51,12 @@
 /* Begin PBXFileReference section */
 		4B1D3DFB284FA44B00749CF2 /* PrimaryCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCustomButton.swift; sourceTree = "<group>"; };
 		4B1D3DFD284FAB8200749CF2 /* UnderlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineButton.swift; sourceTree = "<group>"; };
+		4B1D3DFF284FD3C700749CF2 /* TermsAndConditionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsVC.swift; sourceTree = "<group>"; };
+		4B1D3E00284FD3C700749CF2 /* TermsAndConditionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionsVC.xib; sourceTree = "<group>"; };
+		4B1D3E03284FD4AE00749CF2 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		4B1D3E07284FE0DC00749CF2 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4B1D3E08284FE0DC00749CF2 /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A1417B5E284ECF6D00406C39 /* Not Bored Alkemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Not Bored Alkemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417B61284ECF6D00406C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1417B63284ECF6D00406C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,10 +105,35 @@
 		4B1D3DF5284FA2B900749CF2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				4B1D3E06284FD4BF00749CF2 /* Label */,
+				4B1D3E05284FD4B500749CF2 /* Buttons */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4B1D3E05284FD4B500749CF2 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
 				4B1D3DFB284FA44B00749CF2 /* PrimaryCustomButton.swift */,
 				4B1D3DFD284FAB8200749CF2 /* UnderlineButton.swift */,
 			);
-			path = CustomViews;
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4B1D3E06284FD4BF00749CF2 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D3E03284FD4AE00749CF2 /* TitleLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		4B1D3E0B284FE39000749CF2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A1417B55284ECF6D00406C39 = {
@@ -122,6 +159,7 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
+				4B1D3E0B284FE39000749CF2 /* Extension */,
 				A1417BAE284EDB7100406C39 /* Managers */,
 				A1417BAD284EDB2200406C39 /* Support */,
 				A1417BAC284EDA9D00406C39 /* Protocols */,
@@ -183,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				A1417BA3284ED88B00406C39 /* HomeViewController.swift */,
+				4B1D3DFF284FD3C700749CF2 /* TermsAndConditionsVC.swift */,
+				4B1D3E07284FE0DC00749CF2 /* ActivityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				A1417BA4284ED88B00406C39 /* HomeViewController.xib */,
+				4B1D3E00284FD3C700749CF2 /* TermsAndConditionsVC.xib */,
+				4B1D3E08284FE0DC00749CF2 /* ActivityViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +368,8 @@
 			files = (
 				A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */,
 				A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */,
+				4B1D3E02284FD3C700749CF2 /* TermsAndConditionsVC.xib in Resources */,
+				4B1D3E0A284FE0DC00749CF2 /* ActivityViewController.xib in Resources */,
 				A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,13 +396,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1417B9C284ED13100406C39 /* ViewController+Extension.swift in Sources */,
+				4B1D3E01284FD3C700749CF2 /* TermsAndConditionsVC.swift in Sources */,
 				A1417B9A284ED04100406C39 /* HomeViewCoordinator.swift in Sources */,
 				4B1D3DFE284FAB8200749CF2 /* UnderlineButton.swift in Sources */,
 				4B1D3DFC284FA44B00749CF2 /* PrimaryCustomButton.swift in Sources */,
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
 				A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */,
+				4B1D3E0D284FE3A600749CF2 /* UIColor+Ext.swift in Sources */,
 				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
+				4B1D3E09284FE0DC00749CF2 /* ActivityViewController.swift in Sources */,
 				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
+				4B1D3E04284FD4AE00749CF2 /* TitleLabel.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,
 			);

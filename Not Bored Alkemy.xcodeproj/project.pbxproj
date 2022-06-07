@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B61284ECF6D00406C39 /* AppDelegate.swift */; };
 		A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B63284ECF6D00406C39 /* SceneDelegate.swift */; };
-		A1417B66284ECF6D00406C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B65284ECF6D00406C39 /* ViewController.swift */; };
-		A1417B69284ECF6D00406C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1417B67284ECF6D00406C39 /* Main.storyboard */; };
 		A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1417B6A284ECF6D00406C39 /* Assets.xcassets */; };
 		A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1417B6C284ECF6D00406C39 /* LaunchScreen.storyboard */; };
 		A1417B79284ECF6E00406C39 /* Not_Bored_AlkemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B78284ECF6E00406C39 /* Not_Bored_AlkemyTests.swift */; };
 		A1417B83284ECF6E00406C39 /* Not_Bored_AlkemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B82284ECF6E00406C39 /* Not_Bored_AlkemyUITests.swift */; };
 		A1417B85284ECF6E00406C39 /* Not_Bored_AlkemyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B84284ECF6E00406C39 /* Not_Bored_AlkemyUITestsLaunchTests.swift */; };
+		A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B91284ECFA900406C39 /* CoordinatorProtocol.swift */; };
+		A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B93284ECFC900406C39 /* MainCoordinator.swift */; };
+		A1417B9A284ED04100406C39 /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B99284ED04100406C39 /* HomeViewCoordinator.swift */; };
+		A1417B9C284ED13100406C39 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B9B284ED13000406C39 /* ViewController+Extension.swift */; };
+		A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B9D284ED1A900406C39 /* View+Extension.swift */; };
+		A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BA3284ED88B00406C39 /* HomeViewController.swift */; };
+		A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BA4284ED88B00406C39 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,6 @@
 		A1417B5E284ECF6D00406C39 /* Not Bored Alkemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Not Bored Alkemy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417B61284ECF6D00406C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1417B63284ECF6D00406C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1417B65284ECF6D00406C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A1417B68284ECF6D00406C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1417B6A284ECF6D00406C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1417B6D284ECF6D00406C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1417B6F284ECF6D00406C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,13 @@
 		A1417B7E284ECF6E00406C39 /* Not Bored AlkemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Not Bored AlkemyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417B82284ECF6E00406C39 /* Not_Bored_AlkemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Not_Bored_AlkemyUITests.swift; sourceTree = "<group>"; };
 		A1417B84284ECF6E00406C39 /* Not_Bored_AlkemyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Not_Bored_AlkemyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1417B91284ECFA900406C39 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		A1417B93284ECFC900406C39 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A1417B99284ED04100406C39 /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
+		A1417B9B284ED13000406C39 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		A1417B9D284ED1A900406C39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		A1417BA3284ED88B00406C39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A1417BA4284ED88B00406C39 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,11 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
-				A1417B61284ECF6D00406C39 /* AppDelegate.swift */,
-				A1417B63284ECF6D00406C39 /* SceneDelegate.swift */,
-				A1417B65284ECF6D00406C39 /* ViewController.swift */,
-				A1417B67284ECF6D00406C39 /* Main.storyboard */,
+				A1417BAE284EDB7100406C39 /* Managers */,
+				A1417BAD284EDB2200406C39 /* Support */,
+				A1417BAC284EDA9D00406C39 /* Protocols */,
+				A1417BA9284EDA2200406C39 /* UI */,
+				A1417BA7284ED9F500406C39 /* Extensions */,
 				A1417B6A284ECF6D00406C39 /* Assets.xcassets */,
 				A1417B6C284ECF6D00406C39 /* LaunchScreen.storyboard */,
 				A1417B6F284ECF6D00406C39 /* Info.plist */,
@@ -125,6 +136,74 @@
 				A1417B84284ECF6E00406C39 /* Not_Bored_AlkemyUITestsLaunchTests.swift */,
 			);
 			path = "Not Bored AlkemyUITests";
+			sourceTree = "<group>";
+		};
+		A1417BA7284ED9F500406C39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1417B9D284ED1A900406C39 /* View+Extension.swift */,
+				A1417B9B284ED13000406C39 /* ViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A1417BA8284EDA0A00406C39 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A1417B99284ED04100406C39 /* HomeViewCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A1417BA9284EDA2200406C39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BAB284EDA4B00406C39 /* Views */,
+				A1417BAA284EDA3300406C39 /* Controllers */,
+				A1417BA8284EDA0A00406C39 /* Coordinators */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A1417BAA284EDA3300406C39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BA3284ED88B00406C39 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A1417BAB284EDA4B00406C39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BA4284ED88B00406C39 /* HomeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1417BAC284EDA9D00406C39 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A1417B91284ECFA900406C39 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A1417BAD284EDB2200406C39 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A1417B93284ECFC900406C39 /* MainCoordinator.swift */,
+				A1417B63284ECF6D00406C39 /* SceneDelegate.swift */,
+				A1417B61284ECF6D00406C39 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A1417BAE284EDB7100406C39 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +312,7 @@
 			files = (
 				A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */,
 				A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */,
-				A1417B69284ECF6D00406C39 /* Main.storyboard in Resources */,
+				A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1417B66284ECF6D00406C39 /* ViewController.swift in Sources */,
+				A1417B9C284ED13100406C39 /* ViewController+Extension.swift in Sources */,
+				A1417B9A284ED04100406C39 /* HomeViewCoordinator.swift in Sources */,
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
+				A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */,
+				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
+				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
+				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1417B67284ECF6D00406C39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1417B68284ECF6D00406C39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A1417B6C284ECF6D00406C39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +520,7 @@
 				INFOPLIST_FILE = "Not Bored Alkemy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +548,7 @@
 				INFOPLIST_FILE = "Not Bored Alkemy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

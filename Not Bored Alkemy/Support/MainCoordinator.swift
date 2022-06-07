@@ -10,17 +10,15 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     func start() {
-
-
+            
+        let vc = SuggestionViewController.init(mode: "Random")
+        vc.coordinator = SuggestionViewCoordinator(navigationController: navigationController)
         
-                let vc = HomeViewController.instance()
-                vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
-
         navigationController.pushViewController(vc, animated: true)
     }
 }

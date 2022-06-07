@@ -21,6 +21,12 @@
 		A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B9D284ED1A900406C39 /* View+Extension.swift */; };
 		A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BA3284ED88B00406C39 /* HomeViewController.swift */; };
 		A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BA4284ED88B00406C39 /* HomeViewController.xib */; };
+		A1417BB0284F9BB400406C39 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BAF284F9BB400406C39 /* NetworkManager.swift */; };
+		A1417BB3284F9DB200406C39 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB2284F9DB200406C39 /* Activity.swift */; };
+		A1417BB6284FA18700406C39 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB4284FA18700406C39 /* SuggestionViewController.swift */; };
+		A1417BB7284FA18700406C39 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BB5284FA18700406C39 /* SuggestionViewController.xib */; };
+		A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */; };
+		A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BBB284FA2C300406C39 /* CommonErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		A1417B9D284ED1A900406C39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A1417BA3284ED88B00406C39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1417BA4284ED88B00406C39 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A1417BAF284F9BB400406C39 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A1417BB2284F9DB200406C39 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		A1417BB4284FA18700406C39 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		A1417BB5284FA18700406C39 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewCoordinator.swift; sourceTree = "<group>"; };
+		A1417BBB284FA2C300406C39 /* CommonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,8 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
+				A1417BBA284FA2A700406C39 /* Utilities */,
+				A1417BB1284F9DA000406C39 /* Model */,
 				A1417BAE284EDB7100406C39 /* Managers */,
 				A1417BAD284EDB2200406C39 /* Support */,
 				A1417BAC284EDA9D00406C39 /* Protocols */,
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				A1417B99284ED04100406C39 /* HomeViewCoordinator.swift */,
+				A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -169,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A1417BA3284ED88B00406C39 /* HomeViewController.swift */,
+				A1417BB4284FA18700406C39 /* SuggestionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				A1417BA4284ED88B00406C39 /* HomeViewController.xib */,
+				A1417BB5284FA18700406C39 /* SuggestionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,8 +219,25 @@
 		A1417BAE284EDB7100406C39 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A1417BAF284F9BB400406C39 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A1417BB1284F9DA000406C39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BB2284F9DB200406C39 /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1417BBA284FA2A700406C39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BBB284FA2C300406C39 /* CommonErrors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1417BB7284FA18700406C39 /* SuggestionViewController.xib in Resources */,
 				A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */,
 				A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */,
 				A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */,
@@ -337,6 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1417BB3284F9DB200406C39 /* Activity.swift in Sources */,
+				A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */,
+				A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */,
+				A1417BB0284F9BB400406C39 /* NetworkManager.swift in Sources */,
 				A1417B9C284ED13100406C39 /* ViewController+Extension.swift in Sources */,
 				A1417B9A284ED04100406C39 /* HomeViewCoordinator.swift in Sources */,
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
@@ -345,6 +384,7 @@
 				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,
+				A1417BB6284FA18700406C39 /* SuggestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

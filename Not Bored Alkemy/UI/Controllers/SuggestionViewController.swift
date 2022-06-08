@@ -16,6 +16,7 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var categoryStackView: UIStackView!
     @IBOutlet weak var categoryLbl: UILabel!
+    @IBOutlet weak var tryAnotherButton: PrimaryCustomButton!
     
     var coordinator: SuggestionViewCoordinator!
     var category: String
@@ -41,6 +42,9 @@ class SuggestionViewController: UIViewController {
         getActivity()
     }
     
+    @IBAction func tryAnotherButtonAction(_ sender: Any) {
+        getActivity()
+    }
     func configureNavigationController() {
         self.navigationController?.configureAppareance()
         self.navigationController?.setBackButtonTitle("")

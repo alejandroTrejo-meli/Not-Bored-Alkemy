@@ -55,7 +55,7 @@ class SuggestionViewController: UIViewController {
     }
     
     func configureStackView() {
-        categoryStackView.isHidden = category == "Random" ? false : true
+        categoryStackView.isHidden = category == "random" ? false : true
     }
     
     func getActivity() {

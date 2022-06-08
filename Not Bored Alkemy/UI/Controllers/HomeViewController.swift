@@ -73,6 +73,12 @@ class HomeViewController: UIViewController {
             startButton.isEnabled = false
         }
     }
+    @IBAction func textChanged(_ sender: UITextField) {
+        let userInsertedValue = sender.text
+        
+        numberOfParticipants = Int(userInsertedValue!)
+        checkIfCanContinue()
+    }
 }
 
 
@@ -83,12 +89,13 @@ extension HomeViewController: UITextFieldDelegate{
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
     }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//
+//        let userInsertedValue = textField.text
+//
+//        numberOfParticipants = Int(userInsertedValue!)
+//        //checkIfCanContinue()
+//    }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        let userInsertedValue = textField.text
-        
-        numberOfParticipants = Int(userInsertedValue!)
-        checkIfCanContinue()
-    }
 }

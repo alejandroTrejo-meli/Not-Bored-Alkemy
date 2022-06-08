@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - Welcome
 struct Activity: Codable {
     let activity: String

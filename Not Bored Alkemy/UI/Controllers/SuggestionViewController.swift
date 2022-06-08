@@ -19,11 +19,11 @@ class SuggestionViewController: UIViewController {
     
     var coordinator: SuggestionViewCoordinator!
     var category: String
-    var numOfPeople: Int
+    var numOfPeople: Int?
     
     // MARK: - Initialization
     
-    init(category: String, numOfPeople: Int) {
+    init(category: String, numOfPeople: Int?) {
         self.category = category
         self.numOfPeople = numOfPeople
         
@@ -51,6 +51,7 @@ class SuggestionViewController: UIViewController {
         self.title = category
         priceLbl.text = getActivityRange(with: activity)
         categoryLbl.text = String(activity.type.firstCapitalized)
+        numberOfParticipantsLbl.text = String(activity.participants)
     }
     
     func configureStackView() {

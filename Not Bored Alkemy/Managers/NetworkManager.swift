@@ -11,7 +11,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func performRequest(with category: String, numOfPeople: Int, completion: @escaping (Result<Activity, RequestError>) -> ()) {
+    func performRequest(with category: String, numOfPeople: Int?, completion: @escaping (Result<Activity, RequestError>) -> ()) {
         
         let url = makeApiURL(category: category, numOfPeople: numOfPeople)
         let session = URLSession(configuration: .default)

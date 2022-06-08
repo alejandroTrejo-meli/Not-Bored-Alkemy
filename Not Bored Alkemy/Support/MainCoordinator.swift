@@ -15,19 +15,10 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     func start() {
-<<<<<<< HEAD
-            
-        let vc = SuggestionViewController.init(category: "Random", numOfPeople: 2)
-        vc.coordinator = SuggestionViewCoordinator(navigationController: navigationController)
-        
-=======
-
-        //let vc = HomeViewController.instance()
-        //vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
 
         let vc = CategoryListViewController(numOfPeople: nil)
         vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
->>>>>>> main
+
         navigationController.pushViewController(vc, animated: true)
     }
 }

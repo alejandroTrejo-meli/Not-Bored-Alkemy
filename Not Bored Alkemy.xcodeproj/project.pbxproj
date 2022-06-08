@@ -28,13 +28,13 @@
 		A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BA3284ED88B00406C39 /* HomeViewController.swift */; };
 		A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BA4284ED88B00406C39 /* HomeViewController.xib */; };
 		A1417BB0284F9BB400406C39 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BAF284F9BB400406C39 /* NetworkManager.swift */; };
-		A1417BB3284F9DB200406C39 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB2284F9DB200406C39 /* Activity.swift */; };
 		A1417BB6284FA18700406C39 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB4284FA18700406C39 /* SuggestionViewController.swift */; };
 		A1417BB7284FA18700406C39 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BB5284FA18700406C39 /* SuggestionViewController.xib */; };
 		A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */; };
 		A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BBB284FA2C300406C39 /* CommonErrors.swift */; };
 		A1417BC02850253900406C39 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BBF2850253900406C39 /* String+Extension.swift */; };
 		A1417BC2285028E400406C39 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */; };
+		A176404F285052B100D5DB68 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A176404E285052B100D5DB68 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,13 +80,13 @@
 		A1417BA3284ED88B00406C39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1417BA4284ED88B00406C39 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A1417BAF284F9BB400406C39 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		A1417BB2284F9DB200406C39 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A1417BB4284FA18700406C39 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		A1417BB5284FA18700406C39 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewCoordinator.swift; sourceTree = "<group>"; };
 		A1417BBB284FA2C300406C39 /* CommonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrors.swift; sourceTree = "<group>"; };
 		A1417BBF2850253900406C39 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		A176404E285052B100D5DB68 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				76F8F235284F8C9400FBB329 /* Category.swift */,
+				A176404E285052B100D5DB68 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,14 +272,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A1417BB1284F9DA000406C39 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A1417BB2284F9DB200406C39 /* Activity.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A1417BBA284FA2A700406C39 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1417BB3284F9DB200406C39 /* Activity.swift in Sources */,
 				A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */,
 				A1417BC2285028E400406C39 /* UINavigationController+Extension.swift in Sources */,
 				A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */,
@@ -431,6 +423,7 @@
 				A1417B9A284ED04100406C39 /* HomeViewCoordinator.swift in Sources */,
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
 				A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */,
+				A176404F285052B100D5DB68 /* Activity.swift in Sources */,
 				A1417BC02850253900406C39 /* String+Extension.swift in Sources */,
 				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
 				76F8F23C284F994200FBB329 /* TableCell.swift in Sources */,

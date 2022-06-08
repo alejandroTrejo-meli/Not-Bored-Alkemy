@@ -10,17 +10,15 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
     func start() {
-
-        //let vc = HomeViewController.instance()
-        //vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
-
-        let vc = CategoryListViewController(numOfPeople: nil)
-        vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
+        let vc = HomeViewController.instance()
+        vc.coordinator = HomeViewCoordinator(navigationController: navigationController)
+        
         navigationController.pushViewController(vc, animated: true)
     }
 }

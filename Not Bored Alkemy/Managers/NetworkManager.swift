@@ -47,16 +47,15 @@ class NetworkManager {
     }
     
     public func makeApiURL(category: String, numOfPeople: Int?) -> URL {
-        
         guard let numOfPeople = numOfPeople else {
-            if category == "Random" {
+            if category == "random" {
                 return URL(string: "http://www.boredapi.com/api/activity/")!
             } else {
                 return URL(string: "http://www.boredapi.com/api/activity?type=\(category)")!
             }
         }
         
-        if category == "Random" {
+        if category == "random" {
             return URL(string: "http://www.boredapi.com/api/activity?participants=\(numOfPeople)")!
         } else {
             return URL(string: "http://www.boredapi.com/api/activity?type=\(category)&participants=\(numOfPeople)")!

@@ -24,7 +24,7 @@ class SuggestionViewController: UIViewController {
     // MARK: - Initialization
     
     init(category: String, numOfPeople: Int?) {
-        self.category = category
+        self.category = category.lowercased()
         self.numOfPeople = numOfPeople
         
         super.init(nibName: "SuggestionViewController", bundle: Bundle.main)
@@ -48,7 +48,7 @@ class SuggestionViewController: UIViewController {
     
     func configureItems(activity: Activity) {
         activityTitleLbl.text = activity.activity
-        self.title = category
+        self.title = category.firstCapitalized
         priceLbl.text = getActivityRange(with: activity)
         categoryLbl.text = String(activity.type.firstCapitalized)
         numberOfParticipantsLbl.text = String(activity.participants)

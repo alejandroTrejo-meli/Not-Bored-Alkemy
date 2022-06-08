@@ -38,8 +38,7 @@ class NetworkManager {
                     completion(.success(decodedActivity))
                 }
             } catch {
-                completion(.failure(.couldNotDecode))
-                
+                completion(.failure(.acitvityNotFound))
             }
             
         }

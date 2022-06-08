@@ -16,6 +16,7 @@ class SuggestionViewController: UIViewController {
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var categoryStackView: UIStackView!
     @IBOutlet weak var categoryLbl: UILabel!
+    @IBOutlet weak var tryAnotherButton: PrimaryCustomButton!
     
     var coordinator: SuggestionViewCoordinator!
     var category: String
@@ -36,11 +37,14 @@ class SuggestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getActivity()
         configureNavigationController()
         configureStackView()
+        getActivity()
     }
     
+    @IBAction func tryAnotherButtonAction(_ sender: Any) {
+        getActivity()
+    }
     func configureNavigationController() {
         self.navigationController?.configureAppareance()
         self.navigationController?.setBackButtonTitle("")
@@ -59,6 +63,7 @@ class SuggestionViewController: UIViewController {
     }
     
     func getActivity() {
+        
         NetworkManager.shared.performRequest(with: category, numOfPeople: numOfPeople) { [weak self] result in
             guard let self = self else { return }
             
@@ -67,8 +72,19 @@ class SuggestionViewController: UIViewController {
             case .success(let activity):
                 print(activity)
                 self.configureItems(activity: activity)
+                
             case .failure(let error):
-                print(error)
+                self.createAlertView(error: error.errorDescription ?? "Sorry, we could not find any activity.")
+            }
+        }
+    }
+    
+    func createAlertView(error: String){
+        DispatchQueue.main.async {
+            self.presentAlertWithTitleAndMessage(title: "Could Not Find Activity", message: error) { [self] stylePressed in
+                if stylePressed == "Default" {
+                    self.coordinator.toCategoryScreen(numOfPeople: self.numOfPeople)
+                }
             }
         }
     }

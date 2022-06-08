@@ -15,7 +15,10 @@ class HomeViewCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func toActivities(numOfParticipants: Int?){
+    func toCategories(numOfPeople: Int?){
+        var vc = CategoryListViewController(numOfPeople: numOfPeople)
+        vc.numOfPeople = numOfPeople
+        navigationController.pushViewController(vc, animated: true)
         
     }
 

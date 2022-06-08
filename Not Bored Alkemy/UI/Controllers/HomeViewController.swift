@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func `continue`(_ sender: Any) {
-        coordinator.toActivities(numOfParticipants: numberOfParticipants)
+        coordinator.toCategories(numOfPeople: numberOfParticipants)
     }
     
     @IBAction func toTermsAndConditions(_ sender: Any) {

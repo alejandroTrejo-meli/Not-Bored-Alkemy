@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     var coordinator: HomeViewCoordinator!
     var didCheckTerms = false
     var numberOfParticipants: Int?
+    var defaults = UserDefaults.standard
     
     
     override func viewDidLoad() {
@@ -27,11 +28,19 @@ class HomeViewController: UIViewController {
     func setUp(){
         hideKeyboardWhenTappedAround()
         participantsTextfield.delegate = self
-        startButton.isEnabled = false
+        checkUserPreferences()
+    }
+    
+    
+    func checkUserPreferences(){
+        didCheckTerms = defaults.bool(forKey: "DidCheckTerms")
+        startButton.isEnabled = didCheckTerms
+        changeCheckButtonAppearence()
     }
     
     
     @IBAction func `continue`(_ sender: Any) {
+        defaults.set(didCheckTerms, forKey: "DidCheckTerms")
         coordinator.toCategories(numOfPeople: numberOfParticipants)
     }
     
@@ -42,9 +51,13 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func checkButton(_ sender: Any) {
-        var tintColor: UIColor
-        
         didCheckTerms = !didCheckTerms
+        changeCheckButtonAppearence()
+    }
+    
+    
+    func changeCheckButtonAppearence(){
+        var tintColor: UIColor
         
         switch didCheckTerms {
         case true:
@@ -73,6 +86,8 @@ class HomeViewController: UIViewController {
             startButton.isEnabled = false
         }
     }
+    
+    
     @IBAction func textChanged(_ sender: UITextField) {
         let userInsertedValue = sender.text
         
@@ -89,13 +104,4 @@ extension HomeViewController: UITextFieldDelegate{
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
     }
-//
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//
-//        let userInsertedValue = textField.text
-//
-//        numberOfParticipants = Int(userInsertedValue!)
-//        //checkIfCanContinue()
-//    }
-    
 }

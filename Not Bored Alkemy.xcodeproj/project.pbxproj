@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		766704B12850D86800AC353F /* CategoryListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */; };
 		76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */; };
 		76F8F232284F7FD200FBB329 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */; };
 		76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */; };
@@ -33,6 +34,14 @@
 		A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417B9D284ED1A900406C39 /* View+Extension.swift */; };
 		A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BA3284ED88B00406C39 /* HomeViewController.swift */; };
 		A1417BA6284ED88B00406C39 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BA4284ED88B00406C39 /* HomeViewController.xib */; };
+		A1417BB0284F9BB400406C39 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BAF284F9BB400406C39 /* NetworkManager.swift */; };
+		A1417BB6284FA18700406C39 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB4284FA18700406C39 /* SuggestionViewController.swift */; };
+		A1417BB7284FA18700406C39 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417BB5284FA18700406C39 /* SuggestionViewController.xib */; };
+		A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */; };
+		A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BBB284FA2C300406C39 /* CommonErrors.swift */; };
+		A1417BC02850253900406C39 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BBF2850253900406C39 /* String+Extension.swift */; };
+		A1417BC2285028E400406C39 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */; };
+		A176404F285052B100D5DB68 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A176404E285052B100D5DB68 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryListViewController+Extension.swift"; sourceTree = "<group>"; };
 		76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCoordinator.swift; sourceTree = "<group>"; };
 		76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewController.xib; sourceTree = "<group>"; };
@@ -83,6 +93,14 @@
 		A1417B9D284ED1A900406C39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A1417BA3284ED88B00406C39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1417BA4284ED88B00406C39 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A1417BAF284F9BB400406C39 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A1417BB4284FA18700406C39 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		A1417BB5284FA18700406C39 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewCoordinator.swift; sourceTree = "<group>"; };
+		A1417BBB284FA2C300406C39 /* CommonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrors.swift; sourceTree = "<group>"; };
+		A1417BBF2850253900406C39 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		A176404E285052B100D5DB68 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				76F8F235284F8C9400FBB329 /* Category.swift */,
+				A176404E285052B100D5DB68 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +203,7 @@
 		A1417B60284ECF6D00406C39 /* Not Bored Alkemy */ = {
 			isa = PBXGroup;
 			children = (
+				A1417BBA284FA2A700406C39 /* Utilities */,
 				76F8F234284F8C7E00FBB329 /* Model */,
 				A1417BAE284EDB7100406C39 /* Managers */,
 				A1417BAD284EDB2200406C39 /* Support */,
@@ -220,6 +240,9 @@
 				4B1D3E0C284FE3A600749CF2 /* UIColor+Ext.swift */,
 				A1417B9D284ED1A900406C39 /* View+Extension.swift */,
 				A1417B9B284ED13000406C39 /* ViewController+Extension.swift */,
+				A1417BBF2850253900406C39 /* String+Extension.swift */,
+				A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */,
+				766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				A1417B99284ED04100406C39 /* HomeViewCoordinator.swift */,
+				A1417BB8284FA1A400406C39 /* SuggestionViewCoordinator.swift */,
 				76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -250,6 +274,7 @@
 			children = (
 				76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */,
 				A1417BA3284ED88B00406C39 /* HomeViewController.swift */,
+				A1417BB4284FA18700406C39 /* SuggestionViewController.swift */,
 				4B1D3DFF284FD3C700749CF2 /* TermsAndConditionsVC.swift */,
 			);
 			path = Controllers;
@@ -260,6 +285,7 @@
 			children = (
 				76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */,
 				A1417BA4284ED88B00406C39 /* HomeViewController.xib */,
+				A1417BB5284FA18700406C39 /* SuggestionViewController.xib */,
 				4B1D3E00284FD3C700749CF2 /* TermsAndConditionsVC.xib */,
 			);
 			path = Views;
@@ -286,8 +312,17 @@
 		A1417BAE284EDB7100406C39 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A1417BAF284F9BB400406C39 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A1417BBA284FA2A700406C39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1417BBB284FA2C300406C39 /* CommonErrors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1417BB7284FA18700406C39 /* SuggestionViewController.xib in Resources */,
 				76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */,
 				A1417B6E284ECF6D00406C39 /* LaunchScreen.storyboard in Resources */,
 				A1417B6B284ECF6D00406C39 /* Assets.xcassets in Resources */,
@@ -424,6 +460,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1417BB9284FA1A400406C39 /* SuggestionViewCoordinator.swift in Sources */,
+				A1417BC2285028E400406C39 /* UINavigationController+Extension.swift in Sources */,
+				A1417BBC284FA2C300406C39 /* CommonErrors.swift in Sources */,
+				A1417BB0284F9BB400406C39 /* NetworkManager.swift in Sources */,
 				76F8F232284F7FD200FBB329 /* CategoryListViewController.swift in Sources */,
 				A1417B9C284ED13100406C39 /* ViewController+Extension.swift in Sources */,
 				4B1D3E01284FD3C700749CF2 /* TermsAndConditionsVC.swift in Sources */,
@@ -432,14 +472,18 @@
 				4B1D3DFC284FA44B00749CF2 /* PrimaryCustomButton.swift in Sources */,
 				A1417B62284ECF6D00406C39 /* AppDelegate.swift in Sources */,
 				A1417B92284ECFA900406C39 /* CoordinatorProtocol.swift in Sources */,
+				A176404F285052B100D5DB68 /* Activity.swift in Sources */,
+				A1417BC02850253900406C39 /* String+Extension.swift in Sources */,
 				4B1D3E0D284FE3A600749CF2 /* UIColor+Ext.swift in Sources */,
 				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
 				76F8F23C284F994200FBB329 /* TableCell.swift in Sources */,
 				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
+				766704B12850D86800AC353F /* CategoryListViewController+Extension.swift in Sources */,
 				4B1D3E04284FD4AE00749CF2 /* TitleLabel.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */,
 				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,
+				A1417BB6284FA18700406C39 /* SuggestionViewController.swift in Sources */,
 				76F8F236284F8C9400FBB329 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

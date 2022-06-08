@@ -14,7 +14,6 @@ class MainCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
     func start() {
         let vc = HomeViewController.instance()
         vc.coordinator = HomeViewCoordinator(navigationController: navigationController)

@@ -11,19 +11,23 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var participantsTextfield: UITextField!
     @IBOutlet weak var startButton: PrimaryCustomButton!
+    @IBOutlet weak var checkBoxButton: PrimaryCustomButton!
     
     var coordinator: HomeViewCoordinator!
-    
+    var didCheckTerms = false
     var numberOfParticipants: Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
     }
     
+    
     func setUp(){
         hideKeyboardWhenTappedAround()
         participantsTextfield.delegate = self
+        startButton.isEnabled = false
     }
     
     
@@ -31,10 +35,44 @@ class HomeViewController: UIViewController {
         coordinator.toCategories(numOfPeople: numberOfParticipants)
     }
     
+    
     @IBAction func toTermsAndConditions(_ sender: Any) {
         coordinator.toTermsAndConditions()
     }
     
+    
+    @IBAction func checkButton(_ sender: Any) {
+        var tintColor: UIColor
+        
+        didCheckTerms = !didCheckTerms
+        
+        switch didCheckTerms {
+        case true:
+            tintColor = UIColor.ColorPalette.PrimaryBlue
+        case false:
+            tintColor = .white
+        }
+        
+        DispatchQueue.main.async {
+            self.checkBoxButton.tintColor = tintColor
+        }
+        
+        checkIfCanContinue()
+    }
+    
+    
+    func checkIfCanContinue(){
+        
+        if didCheckTerms{
+            if numberOfParticipants != 0 || numberOfParticipants == nil{
+                startButton.isEnabled = true
+            } else {
+                startButton.isEnabled = false
+            }
+        } else {
+            startButton.isEnabled = false
+        }
+    }
 }
 
 
@@ -50,12 +88,7 @@ extension HomeViewController: UITextFieldDelegate{
         
         let userInsertedValue = textField.text
         
-        if userInsertedValue == "0" {
-            startButton.isEnabled = false
-        } else {
-            startButton.isEnabled = true
-            numberOfParticipants = Int(userInsertedValue!)
-        }
-        print(numberOfParticipants)
+        numberOfParticipants = Int(userInsertedValue!)
+        checkIfCanContinue()
     }
 }

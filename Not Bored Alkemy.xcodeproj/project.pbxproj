@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		766704B12850D86800AC353F /* CategoryListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */; };
 		76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */; };
 		76F8F232284F7FD200FBB329 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */; };
 		76F8F233284F7FD200FBB329 /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryListViewController+Extension.swift"; sourceTree = "<group>"; };
 		76F8F22E284F7C2700FBB329 /* CategoryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCoordinator.swift; sourceTree = "<group>"; };
 		76F8F230284F7FD200FBB329 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		76F8F231284F7FD200FBB329 /* CategoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewController.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				A1417B9B284ED13000406C39 /* ViewController+Extension.swift */,
 				A1417BBF2850253900406C39 /* String+Extension.swift */,
 				A1417BC1285028E400406C39 /* UINavigationController+Extension.swift */,
+				766704B02850D86800AC353F /* CategoryListViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				A1417BA5284ED88B00406C39 /* HomeViewController.swift in Sources */,
 				76F8F23C284F994200FBB329 /* TableCell.swift in Sources */,
 				A1417B94284ECFC900406C39 /* MainCoordinator.swift in Sources */,
+				766704B12850D86800AC353F /* CategoryListViewController+Extension.swift in Sources */,
 				A1417B64284ECF6D00406C39 /* SceneDelegate.swift in Sources */,
 				76F8F22F284F7C2700FBB329 /* CategoryListCoordinator.swift in Sources */,
 				A1417B9E284ED1A900406C39 /* View+Extension.swift in Sources */,

@@ -16,8 +16,6 @@ class SuggestionViewCoordinator: Coordinator {
     }
     
     func toCategoryScreen(numOfPeople: Int?){
-        let vc = CategoryListViewController.init(numOfPeople: numOfPeople)
-        vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
-        self.navigationController.pushViewController(vc, animated: true)
+        self.navigationController.popViewController(animated: true)
     }
 }

@@ -33,6 +33,8 @@ class CategoryListViewController: UITableViewController {
     }
     
     func setupUI(){
+        self.navigationController?.configureAppareance()
+        self.navigationController?.setBackButtonTitle("")
         self.title = "Activities"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "🔀", style: .plain, target: self, action: #selector(randomPressed))
         registerCells()

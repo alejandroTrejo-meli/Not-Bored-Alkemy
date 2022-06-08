@@ -16,17 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="295.5" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsK-Ek-Lr0">
-                        <rect key="frame" x="10" y="0.0" width="242" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsK-Ek-Lr0">
+                        <rect key="frame" x="10" y="8.5" width="56" height="27.5"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="vsK-Ek-Lr0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4R0-kd-sYM"/>
+                    <constraint firstItem="vsK-Ek-Lr0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xV7-tb-Dt0"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" red="0.52642206697295313" green="0.74100692652844569" blue="0.86078917980194092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="title" destination="vsK-Ek-Lr0" id="TMu-nS-SRh"/>
             </connections>

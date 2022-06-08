@@ -31,4 +31,8 @@ extension CategoryListViewController {
             coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: category)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.bounds.height/10
+    }
 }

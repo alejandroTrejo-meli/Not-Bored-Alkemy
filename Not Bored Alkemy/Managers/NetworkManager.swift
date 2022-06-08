@@ -10,13 +10,10 @@ import UIKit
 class NetworkManager {
     
     static let shared = NetworkManager()
-
     
-    func performRequest(with urlString: String, completion: @escaping (Result<Activity, RequestError>) -> ()) {
-        guard let url = URL(string: urlString) else {
-            completion(.failure(.invalidURL))
-            return
-        }
+    func performRequest(with category: String, numOfPeople: Int, completion: @escaping (Result<Activity, RequestError>) -> ()) {
+        
+        let url = makeApiURL(category: category, numOfPeople: numOfPeople)
         let session = URLSession(configuration: .default)
         
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -48,6 +45,27 @@ class NetworkManager {
         }
         task.resume()
     }
+    
+    public func makeApiURL(category: String, numOfPeople: Int?) -> URL {
+        
+        guard let numOfPeople = numOfPeople else {
+            if category == "Random" {
+                return URL(string: "http://www.boredapi.com/api/activity/")!
+            } else {
+                return URL(string: "http://www.boredapi.com/api/activity?type=\(category)")!
+            }
+        }
+        
+        if category == "Random" {
+            return URL(string: "http://www.boredapi.com/api/activity?participants=\(numOfPeople)")!
+        } else {
+            return URL(string: "http://www.boredapi.com/api/activity?type=\(category)&participants=\(numOfPeople)")!
+        }
+    }
+    
+    
+    
+    
     
     
 }

@@ -16,7 +16,7 @@ class MainCoordinator: Coordinator {
     }
     func start() {
             
-        let vc = SuggestionViewController.init(mode: "Random")
+        let vc = SuggestionViewController.init(category: "Random", numOfPeople: 2)
         vc.coordinator = SuggestionViewCoordinator(navigationController: navigationController)
         
         navigationController.pushViewController(vc, animated: true)

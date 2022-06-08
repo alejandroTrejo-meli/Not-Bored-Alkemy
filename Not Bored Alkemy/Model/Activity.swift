@@ -18,4 +18,5 @@ struct Activity: Codable {
     let price: Double
     let link: String
     let key: String
+    var priceRange: String?
 }

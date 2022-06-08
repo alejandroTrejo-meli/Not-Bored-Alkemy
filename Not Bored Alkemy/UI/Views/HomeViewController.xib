@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Not_Bored_Alkemy" customModuleProvider="target">
             <connections>
+                <outlet property="checkBoxButton" destination="pDe-Iw-3OK" id="QAW-dq-xEM"/>
                 <outlet property="participantsTextfield" destination="ZGU-Nu-pui" id="p4A-C1-GLd"/>
                 <outlet property="startButton" destination="u9A-Mi-DQ5" id="6sl-V3-JgG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -57,21 +58,54 @@
                                 <action selector="continue:" destination="-1" eventType="touchUpInside" id="gE8-GD-RLW"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-sk-VuW" customClass="UnderlineButton" customModule="Not_Bored_Alkemy" customModuleProvider="target">
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mdy-EC-5ev">
                             <rect key="frame" x="0.0" y="53" width="374" height="48"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Terms and conditions"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                    <color key="value" name="SecondaryBlue"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="centerAlignment" value="YES"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Terms and conditions"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="toTermsAndConditions:" destination="-1" eventType="touchUpInside" id="8SW-bQ-9OF"/>
-                            </connections>
-                        </button>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-Iw-3OK" customClass="PrimaryCustomButton" customModule="Not_Bored_Alkemy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Hl6-fT-0u5"/>
+                                        <constraint firstAttribute="height" constant="30" id="nBH-00-MA8"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" image="check"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                            <real key="value" value="28"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="checkButton:" destination="-1" eventType="touchUpInside" id="MnW-ZD-x0O"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="h0a-KA-mj1">
+                                    <rect key="frame" x="35" y="0.0" width="339" height="48"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwy-3K-lWf">
+                                            <rect key="frame" x="0.0" y="0.0" width="51.5" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" name="SecondaryBlue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-sk-VuW" customClass="UnderlineButton" customModule="Not_Bored_Alkemy" customModuleProvider="target">
+                                            <rect key="frame" x="46.5" y="0.0" width="292.5" height="48"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Terms and conditions"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                    <color key="value" name="SecondaryBlue"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="centerAlignment" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Terms and conditions"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="toTermsAndConditions:" destination="-1" eventType="touchUpInside" id="8SW-bQ-9OF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
@@ -92,6 +126,9 @@
         </view>
     </objects>
     <designables>
+        <designable name="pDe-Iw-3OK">
+            <size key="intrinsicContentSize" width="40" height="30"/>
+        </designable>
         <designable name="pqm-CC-w2Q">
             <size key="intrinsicContentSize" width="149.5" height="38.5"/>
         </designable>
@@ -103,6 +140,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="check" width="16" height="16"/>
         <namedColor name="PrimaryBlue">
             <color red="0.039000000804662704" green="0.5690000057220459" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

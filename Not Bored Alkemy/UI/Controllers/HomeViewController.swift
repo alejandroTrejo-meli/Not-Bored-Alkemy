@@ -20,8 +20,7 @@ class HomeViewController: UIViewController {
     var didCheckTerms = false
     var numberOfParticipants: Int?
     var defaults = UserDefaults.standard
-    
-    
+    var priceValue: Float = 0.0
     
     
     override func viewDidLoad() {
@@ -42,7 +41,9 @@ class HomeViewController: UIViewController {
         priceStepper.wraps = true
         priceStepper.autorepeat = true
         priceStepper.stepValue = 0.1
-        priceStepper.minimumValue = 0.0
+        priceStepper.minimumValue = 0
+        
+        priceLabel.text = String(priceStepper.value)
     }
     
     
@@ -54,8 +55,12 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func `continue`(_ sender: Any) {
-        defaults.set(didCheckTerms, forKey: "DidCheckTerms")
-        coordinator.toCategories(numOfPeople: numberOfParticipants)
+        if validateStepperInfo(){
+            defaults.set(didCheckTerms, forKey: "DidCheckTerms")
+            coordinator.toCategories(numOfPeople: numberOfParticipants, priceValue: priceValue)
+        } else {
+            showAlert()
+        }
     }
     
     
@@ -63,7 +68,7 @@ class HomeViewController: UIViewController {
         coordinator.toTermsAndConditions()
     }
     
-
+    
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         priceLabel.text = Float(sender.value).description
     }
@@ -103,6 +108,26 @@ class HomeViewController: UIViewController {
         } else {
             startButton.isEnabled = false
         }
+    }
+    
+    
+    func validateStepperInfo() -> Bool{
+        priceValue = Float(priceStepper.value)
+        if String(priceValue).count > 3{
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "Error", message: "Price is not valid. Try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { alert in
+            return
+        }))
+        
+        self.present(alert, animated: true)
     }
     
     

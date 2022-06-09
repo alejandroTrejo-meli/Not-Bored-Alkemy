@@ -13,10 +13,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var startButton: PrimaryCustomButton!
     @IBOutlet weak var checkBoxButton: PrimaryCustomButton!
     
+    @IBOutlet weak var priceStepper: UIStepper!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     var coordinator: HomeViewCoordinator!
     var didCheckTerms = false
     var numberOfParticipants: Int?
     var defaults = UserDefaults.standard
+    
+    
     
     
     override func viewDidLoad() {
@@ -28,7 +33,16 @@ class HomeViewController: UIViewController {
     func setUp(){
         hideKeyboardWhenTappedAround()
         participantsTextfield.delegate = self
+        stepperSetUp()
         checkUserPreferences()
+    }
+    
+    
+    func stepperSetUp(){
+        priceStepper.wraps = true
+        priceStepper.autorepeat = true
+        priceStepper.stepValue = 0.1
+        priceStepper.minimumValue = 0.0
     }
     
     
@@ -49,6 +63,10 @@ class HomeViewController: UIViewController {
         coordinator.toTermsAndConditions()
     }
     
+
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        priceLabel.text = Float(sender.value).description
+    }
     
     @IBAction func checkButton(_ sender: Any) {
         didCheckTerms = !didCheckTerms

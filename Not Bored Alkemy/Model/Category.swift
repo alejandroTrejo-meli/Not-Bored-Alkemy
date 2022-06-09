@@ -19,3 +19,9 @@ enum Category: String, CaseIterable {
     case busywork = "Busywork"
 }
 
+enum PriceRange: String {
+    case free = "Free"
+    case low = "Low"
+    case medium = "Medium"
+    case high = "High"
+}

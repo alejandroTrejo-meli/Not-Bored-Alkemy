@@ -11,9 +11,11 @@ class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
     var numOfPeople: Int?
+    var priceValue: Float
     
-    init(numOfPeople: Int?) {
+    init(numOfPeople: Int?, priceValue: Float) {
         self.numOfPeople = numOfPeople
+        self.priceValue = priceValue
         
         super.init(nibName: "CategoryListViewController", bundle: Bundle.main)
     }
@@ -28,7 +30,6 @@ class CategoryListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     

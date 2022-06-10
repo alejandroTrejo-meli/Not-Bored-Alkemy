@@ -67,6 +67,8 @@ class HomeViewController: UIViewController {
     @IBAction func `continue`(_ sender: Any) {
         if validateStepperInfo(){
             defaults.set(didCheckTerms, forKey: "DidCheckTerms")
+            minPriceValue = Float(minPriceStepper.value)
+            maxPriceValue = Float(maxPriceStepper.value)
             coordinator.toCategories(numOfPeople: numberOfParticipants, minPriceValue: minPriceValue, maxPriceValue: maxPriceValue)
         } else {
             showAlert()
@@ -85,7 +87,6 @@ class HomeViewController: UIViewController {
         let roundedValue = Float(round(100 * value) / 100)
         minPriceLabel.text = String(roundedValue)
         minPriceValue = roundedValue
-        print(sender)
     }
     
     
@@ -95,7 +96,6 @@ class HomeViewController: UIViewController {
         let roundedValue = Float(round(100 * value) / 100)
         maxPriceLabel.text = String(roundedValue)
         maxPriceValue = roundedValue
-        print(roundedValue)
     }
     
     
@@ -139,11 +139,12 @@ class HomeViewController: UIViewController {
     
     
     func validateStepperInfo() -> Bool{
+        minPriceValue = Float(minPriceStepper.value)
+        maxPriceValue = Float(maxPriceStepper.value)
         
         if String(minPriceValue).count != 3 || String(maxPriceValue).count != 3{
             return false
         } else {
-            
             if minPriceValue > maxPriceValue {
                 (minPriceValue, maxPriceValue) = (maxPriceValue, minPriceValue)
             }

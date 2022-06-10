@@ -15,7 +15,7 @@ class SuggestionViewCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func toCategoryScreen(numOfPeople: Int?){
+    func toCategoryScreen(){
         self.navigationController.popViewController(animated: true)
     }
 }

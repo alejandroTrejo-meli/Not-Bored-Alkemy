@@ -86,7 +86,7 @@ class SuggestionViewController: UIViewController {
         DispatchQueue.main.async {
             self.presentAlertWithTitleAndMessage(title: "Could Not Find Activity", message: error) { [self] stylePressed in
                 if stylePressed == "Default" {
-                    self.coordinator.toCategoryScreen(numOfPeople: self.numOfPeople)
+                    self.coordinator.toCategoryScreen()
                 }
             }
         }

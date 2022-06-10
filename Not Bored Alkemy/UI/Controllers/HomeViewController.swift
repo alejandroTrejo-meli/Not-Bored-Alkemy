@@ -67,7 +67,7 @@ class HomeViewController: UIViewController {
     @IBAction func `continue`(_ sender: Any) {
         if validateStepperInfo(){
             defaults.set(didCheckTerms, forKey: "DidCheckTerms")
-            coordinator.toCategories(numOfPeople: numberOfParticipants, priceValue: minPriceValue)
+            coordinator.toCategories(numOfPeople: numberOfParticipants, minPriceValue: minPriceValue, maxPriceValue: maxPriceValue)
         } else {
             showAlert()
         }

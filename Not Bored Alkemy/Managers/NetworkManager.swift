@@ -14,7 +14,7 @@ class NetworkManager {
     func performRequest(with category: String, numOfPeople: Int?, price: Float, completion: @escaping (Result<Activity, RequestError>) -> ()) {
         
         
-        let url = makeApiURL(category: category, numOfPeople: numOfPeople, price: price)
+        let url = makeApiURL(category: category, numOfPeople: numOfPeople, minPrice: 0, maxPrice: 0.2)
         let session = URLSession(configuration: .default)
         print("URL: \(url)")
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -46,20 +46,21 @@ class NetworkManager {
         task.resume()
     }
     
-    public func makeApiURL(category: String, numOfPeople: Int?, price: Float) -> URL {
+    public func makeApiURL(category: String, numOfPeople: Int?, minPrice: Float, maxPrice: Float) -> URL {
         let baseURL = "http://www.boredapi.com/api/activity"
+        let priceRange = "minprice=\(minPrice)&maxprice=\(maxPrice)"
         guard let numOfPeople = numOfPeople else {
             if category == "random" {
-                return URL(string: baseURL + "?price=\(price)")!
+                return URL(string: baseURL + "?\(priceRange)")!
             } else {
-                return URL(string: baseURL + "?type=\(category)&price=\(price)")!
+                return URL(string: baseURL + "?type=\(category)&\(priceRange)")!
             }
         }
         
         if category == "random" {
-            return URL(string: baseURL + "?participants=\(numOfPeople)&price=\(price)")!
+            return URL(string: baseURL + "?participants=\(numOfPeople)&\(priceRange)")!
         } else {
-            return URL(string: baseURL + "?type=\(category)&participants=\(numOfPeople)&price=\(price)")!
+            return URL(string: baseURL + "?type=\(category)&participants=\(numOfPeople)&\(priceRange)")!
         }
     }
     

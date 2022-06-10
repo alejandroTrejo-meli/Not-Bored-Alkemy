@@ -28,7 +28,7 @@ extension CategoryListViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = self.tableView.cellForRow(at: indexPath) as? TableCell, let category = cell.title.text {
-            coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: category, price: priceValue)
+            coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: category, minPrice: minPrice, maxPrice: maxPrice)
         }
     }
     

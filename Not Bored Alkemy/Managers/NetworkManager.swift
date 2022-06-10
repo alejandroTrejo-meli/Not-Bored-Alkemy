@@ -11,10 +11,10 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func performRequest(with category: String, numOfPeople: Int?, price: Float, completion: @escaping (Result<Activity, RequestError>) -> ()) {
+    func performRequest(with category: String, numOfPeople: Int?, minPrice: Float, maxPrice: Float, completion: @escaping (Result<Activity, RequestError>) -> ()) {
         
         
-        let url = makeApiURL(category: category, numOfPeople: numOfPeople, minPrice: 0, maxPrice: 0.2)
+        let url = makeApiURL(category: category, numOfPeople: numOfPeople, minPrice: minPrice, maxPrice: maxPrice)
         let session = URLSession(configuration: .default)
         print("URL: \(url)")
         let task = session.dataTask(with: url) { (data, response, error) in

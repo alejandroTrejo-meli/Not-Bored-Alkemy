@@ -21,14 +21,16 @@ class SuggestionViewController: UIViewController {
     var coordinator: SuggestionViewCoordinator!
     var category: String
     var numOfPeople: Int?
-    var price: Float
+    var minPrice: Float
+    var maxPrice: Float
     
     // MARK: - Initialization
     
-    init(category: String, numOfPeople: Int?, price: Float) {
+    init(category: String, numOfPeople: Int?, minPrice: Float, maxPrice: Float) {
         self.category = category.lowercased()
         self.numOfPeople = numOfPeople
-        self.price = price
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
         super.init(nibName: "SuggestionViewController", bundle: Bundle.main)
     }
     
@@ -65,7 +67,7 @@ class SuggestionViewController: UIViewController {
     
     func getActivity() {
         
-        NetworkManager.shared.performRequest(with: category, numOfPeople: numOfPeople, price: price) { [weak self] result in
+        NetworkManager.shared.performRequest(with: category, numOfPeople: numOfPeople, minPrice: minPrice, maxPrice: maxPrice) { [weak self] result in
             guard let self = self else { return }
             
             switch result {

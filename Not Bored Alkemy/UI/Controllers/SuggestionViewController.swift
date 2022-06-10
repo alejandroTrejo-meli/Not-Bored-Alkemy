@@ -21,13 +21,14 @@ class SuggestionViewController: UIViewController {
     var coordinator: SuggestionViewCoordinator!
     var category: String
     var numOfPeople: Int?
+    var price: Float
     
     // MARK: - Initialization
     
-    init(category: String, numOfPeople: Int?) {
+    init(category: String, numOfPeople: Int?, price: Float) {
         self.category = category.lowercased()
         self.numOfPeople = numOfPeople
-        
+        self.price = price
         super.init(nibName: "SuggestionViewController", bundle: Bundle.main)
     }
     
@@ -53,7 +54,7 @@ class SuggestionViewController: UIViewController {
     func configureItems(activity: Activity) {
         activityTitleLbl.text = activity.activity
         self.title = category.firstCapitalized
-        priceLbl.text = getActivityRange(with: activity)
+        priceLbl.text = getActivityRange(with: activity).rawValue
         categoryLbl.text = String(activity.type.firstCapitalized)
         numberOfParticipantsLbl.text = String(activity.participants)
     }
@@ -64,7 +65,7 @@ class SuggestionViewController: UIViewController {
     
     func getActivity() {
         
-        NetworkManager.shared.performRequest(with: category, numOfPeople: numOfPeople) { [weak self] result in
+        NetworkManager.shared.performRequest(with: category, numOfPeople: numOfPeople, price: price) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
@@ -89,15 +90,15 @@ class SuggestionViewController: UIViewController {
         }
     }
     
-    func getActivityRange(with activity: Activity) -> String {
+    func getActivityRange(with activity: Activity) -> PriceRange {
         if activity.price == 0 {
-            return "Free"
+            return .free
         } else if activity.price > 0 && activity.price <= 0.3 {
-            return "Low"
+            return .low
         } else if activity.price > 0.3 && activity.price <= 0.6 {
-            return "Medium"
+            return .medium
         } else {
-            return "High"
+            return .high
         }
     }
     

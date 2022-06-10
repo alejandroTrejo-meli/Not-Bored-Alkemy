@@ -49,6 +49,6 @@ class CategoryListViewController: UITableViewController {
     }
     
     @objc func randomPressed(){
-        coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: "Random")
+        coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: "Random", price: priceValue)
     }
 }

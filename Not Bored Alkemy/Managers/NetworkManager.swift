@@ -11,11 +11,12 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func performRequest(with category: String, numOfPeople: Int?, completion: @escaping (Result<Activity, RequestError>) -> ()) {
+    func performRequest(with category: String, numOfPeople: Int?, price: Float, completion: @escaping (Result<Activity, RequestError>) -> ()) {
         
-        let url = makeApiURL(category: category, numOfPeople: numOfPeople)
+        
+        let url = makeApiURL(category: category, numOfPeople: numOfPeople, price: price)
         let session = URLSession(configuration: .default)
-        
+        print("URL: \(url)")
         let task = session.dataTask(with: url) { (data, response, error) in
             
             if let _ = error {
@@ -45,25 +46,21 @@ class NetworkManager {
         task.resume()
     }
     
-    public func makeApiURL(category: String, numOfPeople: Int?) -> URL {
+    public func makeApiURL(category: String, numOfPeople: Int?, price: Float) -> URL {
+        let baseURL = "http://www.boredapi.com/api/activity"
         guard let numOfPeople = numOfPeople else {
             if category == "random" {
-                return URL(string: "http://www.boredapi.com/api/activity/")!
+                return URL(string: baseURL + "?price=\(price)")!
             } else {
-                return URL(string: "http://www.boredapi.com/api/activity?type=\(category)")!
+                return URL(string: baseURL + "?type=\(category)&price=\(price)")!
             }
         }
         
         if category == "random" {
-            return URL(string: "http://www.boredapi.com/api/activity?participants=\(numOfPeople)")!
+            return URL(string: baseURL + "?participants=\(numOfPeople)&price=\(price)")!
         } else {
-            return URL(string: "http://www.boredapi.com/api/activity?type=\(category)&participants=\(numOfPeople)")!
+            return URL(string: baseURL + "?type=\(category)&participants=\(numOfPeople)&price=\(price)")!
         }
     }
-    
-    
-    
-    
-    
     
 }

@@ -11,11 +11,13 @@ class CategoryListViewController: UITableViewController {
     
     var coordinator: CategoryListCoordinator!
     var numOfPeople: Int?
-    var priceValue: Float
+    var minPrice: Float
+    var maxPrice: Float
     
-    init(numOfPeople: Int?, priceValue: Float) {
+    init(numOfPeople: Int?, minPrice: Float, maxPrice: Float) {
         self.numOfPeople = numOfPeople
-        self.priceValue = priceValue
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
         
         super.init(nibName: "CategoryListViewController", bundle: Bundle.main)
     }
@@ -49,6 +51,6 @@ class CategoryListViewController: UITableViewController {
     }
     
     @objc func randomPressed(){
-        coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: "Random", price: priceValue)
+        coordinator.toSuggestionScreen(numOfPeople: numOfPeople, category: "Random", minPrice: minPrice, maxPrice: maxPrice)
     }
 }

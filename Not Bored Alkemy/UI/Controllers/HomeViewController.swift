@@ -80,14 +80,22 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func minStepperValueChanged(_ sender: UIStepper) {
-        minPriceLabel.text = Float(sender.value).description
+        let value = Float(sender.value)
+        // To avoid floating point errors (i.e show 1....^-16 instead of 0)
+        let roundedValue = Float(round(100 * value) / 100)
+        minPriceLabel.text = String(roundedValue)
+        minPriceValue = roundedValue
         print(sender)
     }
     
     
     @IBAction func maxStepperValueChanged(_ sender: UIStepper) {
-        maxPriceLabel.text = Float(sender.value).description
-        print(sender)
+        let value = Float(sender.value)
+        // To avoid floating point errors (i.e show 1....^-16 instead of 0)
+        let roundedValue = Float(round(100 * value) / 100)
+        maxPriceLabel.text = String(roundedValue)
+        maxPriceValue = roundedValue
+        print(roundedValue)
     }
     
     
@@ -131,8 +139,6 @@ class HomeViewController: UIViewController {
     
     
     func validateStepperInfo() -> Bool{
-        minPriceValue = Float(minPriceStepper.value)
-        maxPriceValue = Float(maxPriceStepper.value)
         
         if String(minPriceValue).count != 3 || String(maxPriceValue).count != 3{
             return false

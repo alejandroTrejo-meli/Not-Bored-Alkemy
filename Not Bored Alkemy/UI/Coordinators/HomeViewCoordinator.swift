@@ -15,8 +15,8 @@ class HomeViewCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func toCategories(numOfPeople: Int?, priceValue: Float){
-        let vc = CategoryListViewController(numOfPeople: numOfPeople, priceValue: priceValue)
+    func toCategories(numOfPeople: Int?, minPriceValue: Float, maxPriceValue: Float){
+        let vc = CategoryListViewController(numOfPeople: numOfPeople, minPrice: minPriceValue, maxPrice: maxPriceValue)
         vc.coordinator = CategoryListCoordinator(navigationController: navigationController)
         
         navigationController.pushViewController(vc, animated: true)

@@ -13,14 +13,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var startButton: PrimaryCustomButton!
     @IBOutlet weak var checkBoxButton: PrimaryCustomButton!
     
-    @IBOutlet weak var priceStepper: UIStepper!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var minPriceStepper: UIStepper!
+    @IBOutlet weak var minPriceLabel: UILabel!
+    
+    @IBOutlet weak var maxPriceLabel: UILabel!
+    @IBOutlet weak var maxPriceStepper: UIStepper!
+    
     
     var coordinator: HomeViewCoordinator!
     var didCheckTerms = false
     var numberOfParticipants: Int?
     var defaults = UserDefaults.standard
-    var priceValue: Float = 0.0
+    var minPriceValue: Float = 0.0
+    var maxPriceValue: Float = 0.0
     
     
     override func viewDidLoad() {
@@ -38,12 +43,17 @@ class HomeViewController: UIViewController {
     
     
     func stepperSetUp(){
-        priceStepper.wraps = true
-        priceStepper.autorepeat = true
-        priceStepper.stepValue = 0.1
-        priceStepper.minimumValue = 0
+        minPriceStepper.wraps = true
+        minPriceStepper.autorepeat = true
+        minPriceStepper.stepValue = 0.1
+        minPriceStepper.minimumValue = 0
+        minPriceLabel.text = String(minPriceStepper.value)
         
-        priceLabel.text = String(priceStepper.value)
+        maxPriceStepper.wraps = true
+        maxPriceStepper.autorepeat = true
+        maxPriceStepper.stepValue = 0.1
+        maxPriceStepper.minimumValue = 0
+        maxPriceLabel.text = String(maxPriceStepper.value)
     }
     
     
@@ -57,7 +67,7 @@ class HomeViewController: UIViewController {
     @IBAction func `continue`(_ sender: Any) {
         if validateStepperInfo(){
             defaults.set(didCheckTerms, forKey: "DidCheckTerms")
-            coordinator.toCategories(numOfPeople: numberOfParticipants, priceValue: priceValue)
+            coordinator.toCategories(numOfPeople: numberOfParticipants, priceValue: minPriceValue)
         } else {
             showAlert()
         }
@@ -69,9 +79,18 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        priceLabel.text = Float(sender.value).description
+    @IBAction func minStepperValueChanged(_ sender: UIStepper) {
+        minPriceLabel.text = Float(sender.value).description
+        print(sender)
     }
+    
+    
+    @IBAction func maxStepperValueChanged(_ sender: UIStepper) {
+        maxPriceLabel.text = Float(sender.value).description
+        print(sender)
+    }
+    
+    
     
     @IBAction func checkButton(_ sender: Any) {
         didCheckTerms = !didCheckTerms
@@ -112,17 +131,24 @@ class HomeViewController: UIViewController {
     
     
     func validateStepperInfo() -> Bool{
-        priceValue = Float(priceStepper.value)
-        if String(priceValue).count > 3{
+        minPriceValue = Float(minPriceStepper.value)
+        maxPriceValue = Float(maxPriceStepper.value)
+        
+        if String(minPriceValue).count != 3 || String(maxPriceValue).count != 3{
             return false
         } else {
+            
+            if minPriceValue > maxPriceValue {
+                (minPriceValue, maxPriceValue) = (maxPriceValue, minPriceValue)
+            }
+            
             return true
         }
     }
     
     
     func showAlert(){
-        let alert = UIAlertController(title: "Error", message: "Price is not valid. Try again.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: "Price range is not valid. Try again.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { alert in
             return
         }))
@@ -133,7 +159,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func textChanged(_ sender: UITextField) {
         let userInsertedValue = sender.text
-        
         numberOfParticipants = Int(userInsertedValue!)
         checkIfCanContinue()
     }
